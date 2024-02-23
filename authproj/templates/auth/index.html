@@ -1,0 +1,17 @@
+{% extends "auth/base.html" %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+auth
+{% else %}
+not auth
+{% endif %}
+Hello, {{us}}
+<br>
+
+<a href="{% url 'signup' %}">signup</a><br>
+<a href="{% url 'login' %}">login</a><br>
+<a href="{% url 'logout' %}">logout</a>
+
+{% endblock %}
